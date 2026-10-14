@@ -1,0 +1,79 @@
+/* Color Palette
+#141210 - Espresso Black
+#29211C - Dark Roast
+#594535 - Walnut Brown
+#C6A984 - Latte Beige
+#F3E9DB - Warm Cream
+*/
+
+/* Global styles */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    background: #141210;
+    color: #F3E9DB;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; line-height: 1.15; letter-spacing: -2px; margin: 0 0 15px; }
+h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 35px; }
+h3 { font-size: 19px; font-weight: 700; color: #F3E9DB; margin-bottom: 6px; }
+p { margin-top: 0; }
+a { color: #C6A984; text-decoration: none; }
+a:hover { color: #F3E9DB; text-decoration: underline; }
+
+/* Header and intro layout */
+header {
+    background: #141210;
+    padding: 100px max(8%, calc((100% - 1100px)/2));
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.profile-img {
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 45%;
+    border: 3px solid #594535;
+    display: block;
+}
+.intro { flex: 1; min-width: 0; }
+.intro h2 { color: #C6A984; font-size: 19px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
+.intro p { max-width: 650px; margin-bottom: 0; color: #B8ACA1; }
+
+/* Work Experience */
+main section:first-child { background: #29211C; padding: 85px max(8%, calc((100% - 1100px)/2)); }
+main section:first-child h2 { color: #C6A984; }
+main section:first-child h3 { margin-top: 35px; }
+main section:first-child p { color: #CBBEB1; }
+li { padding-left: 8px; margin-bottom: 10px; }
+li::marker { color: #C6A984; }
+
+/* Education */
+main section:last-child { background: #594535; padding: 85px max(8%, calc((100% - 1100px)/2)); }
+main section:last-child p { color: #E5D6C4; }
+
+/* Footer */
+footer { background: #141210; padding: 70px 8%; text-align: center; border-top: 1px solid #594535; }
+footer h2 { color: #C6A984; font-size: 28px; }
+footer a { display: inline-block; margin: 8px 14px; font-weight: 600; }
+footer p { margin-top: 35px; color: #8C8075; font-size: 13px; }
+
+/* Small screens */
+@media (max-width: 700px) {
+    header { padding: 60px 7%; }
+    .header-content { flex-direction: column; text-align: center; gap: 25px; }
+    .intro p { margin: 0 auto; }
+    main section:first-child, main section:last-child { padding: 60px 7%; }
+    h1 { letter-spacing: -1px; }
+}
